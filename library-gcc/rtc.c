@@ -81,12 +81,12 @@
 // statically allocated structure for time value
 struct tm _tm;
 
-uint8_t dec2bcd(uint8_t d)
+static uint8_t dec2bcd(uint8_t d)
 {
   return ((d/10 * 16) + (d % 10));
 }
 
-uint8_t bcd2dec(uint8_t b)
+static uint8_t bcd2dec(uint8_t b)
 {
   return ((b/16 * 10) + (b % 16));
 }
