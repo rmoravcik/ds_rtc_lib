@@ -67,8 +67,10 @@ void twi_init(void)
   #if defined(__AVR_ATmega168__) || defined(__AVR_ATmega8__) || defined(__AVR_ATmega328P__)
     // activate internal pull-ups for twi
     // as per note from atmega8 manual pg167
+#if 0
     sbi(PORTC, 4);
     sbi(PORTC, 5);
+#endif
   #else
     // activate internal pull-ups for twi
     // as per note from atmega128 manual pg204
